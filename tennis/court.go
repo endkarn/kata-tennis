@@ -1,8 +1,8 @@
 package tennis
 
 type Court struct {
-	Player1Score int
-	Player2Score int
+	PlayerOneScore int
+	PlayerTwoScore int
 }
 
 func (court Court) GetScore() string {
