@@ -5,14 +5,12 @@ type Court struct {
 	PlayerTwoScore int
 }
 
-
-
 func (court Court) GetScore() string {
 	scoreMap := map[int]string{
-		0:"LOVE",
-		1:"15",
-		2:"30",
-		3:"40",
+		0: "LOVE",
+		1: "15",
+		2: "30",
+		3: "40",
 	}
 	if court.PlayerTwoScore == 4 {
 		return "Player 2 Win"
@@ -20,5 +18,5 @@ func (court Court) GetScore() string {
 	if court.PlayerOneScore == 4 {
 		return "Player 1 Win"
 	}
-	return scoreMap[court.PlayerOneScore]+"-"+scoreMap[court.PlayerTwoScore]
+	return scoreMap[court.PlayerOneScore] + "-" + scoreMap[court.PlayerTwoScore]
 }
