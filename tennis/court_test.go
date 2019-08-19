@@ -130,3 +130,17 @@ func Test_GetScore_Input_Court_PlayerOneScore_4_Court_PlayerTwoScore_0_Should_Be
 		t.Errorf("Expected in %s but get %s ", expected, actual)
 	}
 }
+
+func Test_GetScore_Input_Court_PlayerOneScore_2_Court_PlayerTwoScore_2_Should_Be_30_30(t *testing.T) {
+	expected := "30-30"
+	court := tennis.Court{
+		PlayerOneScore: 2,
+		PlayerTwoScore: 2,
+	}
+
+	actual := court.GetScore()
+
+	if expected != actual {
+		t.Errorf("Expected in %s but get %s ", expected, actual)
+	}
+}
